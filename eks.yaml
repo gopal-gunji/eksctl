@@ -1,4 +1,3 @@
-# spot-cluster.yaml
 
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
@@ -7,10 +6,36 @@ metadata:
   name: roboshop
   region: us-east-1
 
+autoModeConfig:
+  enabled: false
+
 managedNodeGroups:
 - name: spot
-  instanceTypes: ["t3.micro","t3.small","c7i-flex.large","c7i-flex.large","c8i.micro","c8i.small"]
-  # AWS Free tier
-  #instanceTypes: ["m7i-flex.large","c7i-flex.large","t3.small"]
+  instanceTypes: ["t3.small", "c7i-flex.large"]
   spot: true
   desiredCapacity: 2
+
+
+
+
+
+
+
+
+
+# spot-cluster.yaml
+
+# apiVersion: eksctl.io/v1alpha5
+# kind: ClusterConfig
+
+# metadata:
+#   name: roboshop
+#   region: us-east-1
+
+# managedNodeGroups:
+# - name: spot
+#   instanceTypes: ["t3.micro","t3.small","c7i-flex.large","c7i-flex.large","c8i.micro","c8i.small"]
+#   # AWS Free tier
+#   #instanceTypes: ["m7i-flex.large","c7i-flex.large","t3.small"]
+#   spot: true
+#   desiredCapacity: 2
