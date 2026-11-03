@@ -11,11 +11,11 @@ autoModeConfig:
 
 managedNodeGroups:
 - name: spot
-  instanceTypes: ["t3.micro","t3.small","c7i-flex.large","c7i-flex.large","c8i.micro","c8i.small"]
+  instanceTypes:
+      - t3.small
+      - t3.medium
   spot: true
   desiredCapacity: 2
-
-
 
 
 
